@@ -11,16 +11,9 @@ class Rfid:
 
 		self.ser = serial.Serial( self.dev_path , 2400 )
 
-	def itterator(self):
-		while 1:
-			yield self.ser.readline()
-
-
 	def main(self):
-		for i in self.itterator():
-			print i 
-
-
+		while True:
+			print self.ser.readline() 
 
 def main():
 	rfid = Rfid()
