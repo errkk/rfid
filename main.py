@@ -1,8 +1,7 @@
 #!/usr/bin/python
 import serial
 
-# connect port
-ser = serial.Serial('/dev/ttyUSB0', 2400)
+
 
 
 class Rfid:
@@ -10,11 +9,11 @@ class Rfid:
 
 	def __init__(self):
 
-		self.serial.Serial( self.dev_path , 2400 )
+		self.ser = serial.Serial( self.dev_path , 2400 )
 
 	def itterator(self):
 		while 1:
-			yield self.serial.readline()
+			yield self.ser.readline()
 
 
 	def main(self):
