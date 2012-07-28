@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import serial
 
 # connect port
@@ -19,3 +20,12 @@ class Rfid:
 	def main(self):
 		for i in self.itterator():
 			print i 
+
+
+
+def main():
+	rfid = Rfid()
+	rfid.main()
+
+if __name__ == '__main__':
+	main();
